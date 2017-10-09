@@ -1,10 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var hellome = 'onload="gearchoice()"'
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('carcalculations', { title: 'Warnock Solutions Car Calculations' });
+  res.render('resume', { title: 'My Resume' });
 });
 
 module.exports = router;

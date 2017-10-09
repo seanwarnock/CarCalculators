@@ -1,34 +1,33 @@
 body{
   background-color:#4d86a0;
+  color:#efefef;
   font-size: 13pt;
   }
 a:link{
-  color:#ffffff;
+  color:#dfe0d2;
 }
 a:visited{
+  color:#dfe0d2;
+}
+a:hover{
   color:#ffffff;
 }
 p {
-    color:#ffffff;
-  }
-  /*
-thead {
-  color:red;
-counter-increment:;
-  }
-*/
+}
 h1{
   font-size: 14pt;
-  color:#ffffff;
+}
+h2{
+}
+h3{
 }
 footer{
   font-size: 10pt;
   text-align: center;
-  color:#ffffff;
 }
 input:invalid {
     color:red;
-  }
+}
 div.center{
 /*color:#ffffff; */
 padding-left: 11em;
