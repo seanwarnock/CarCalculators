@@ -24,77 +24,29 @@ block content
       <option value="metric">Metric</option>
     </select>
 
-    h1 Tire Size Calculator
-    p This calculator will assist you in determining the actual size of your tire.  Currently very limited and only usable for passenger car tires.</p>
-    <select id="tirewidth" onchange="tiresizer()">
-      <option value="160">160</option>
-      <option value="165">165</option>
-      <option value="170">170</option>
-      <option value="175">175</option>
-      <option value="180">180</option>
-      <option value="185">185</option>
-      <option value="190">190</option>
-      <option value="195">195</option>
-      <option value="200">200</option>
-      <option value="205">205</option>
-      <option value="215">215</option>
-      <option value="220">220</option>
-      <option value="225">225</option>
-      <option value="230">230</option>
-      <option value="235">235</option>
-      <option value="240">240</option>
-      <option value="245">245</option>
-      <option value="250">250</option>
-      <option value="255">255</option>
-      <option value="260">260</option>
-      <option value="265">265</option>
-      <option value="270">270</option>
-      <option value="275">275</option>
-      <option value="280">280</option>
-      <option value="285">285</option>
-      <option value="290">290</option>
-      <option value="295">295</option>
-      <option value="300">300</option>
-      <option value="305">305</option>
-      <option value="310">310</option>
-      <option value="315">315</option>
-      <option value="320">320</option>
-      <option value="325">325</option>
-    </select>
-    <select id="tireaspect" onchange="tiresizer()">
-      <option value="10">10</option>
-      <option value="15">15</option>
-      <option value="20">20</option>
-      <option value="25">25</option>
-      <option value="30">30</option>
-      <option value="35">35</option>
-      <option value="40">40</option>
-      <option value="45">45</option>
-      <option value="50">50</option>
-      <option value="55">55</option>
-      <option value="60">60</option>
-      <option value="65">65</option>
-      <option value="70">70</option>
-      <option value="75">75</option>
-      <option value="83">&nbsp;</option>
-    </select>
-    <select id="tirer" onchange="tiresizer()">
-      <option value="R">R</option>
-      <option value="B">B</option>
-      <option value="D">D</option>
-    </select>
-    <select id="tirewheel" onchange="tiresizer()">
-      <option value="10">10</option>
-      <option value="11">11</option>
-      <option value="12">12</option>
-      <option value="13">13</option>
-      <option value="14">14</option>
-      <option value="15">15</option>
-      <option value="16">16</option>
-      <option value="17">17</option>
-      <option value="18">18</option>
-      <option value="19">19</option>
-      <option value="20">20</option>
-      <option value="21">21</option>
-    </select>
-    #tireanswer
+
+  h1 Tire Size Calculator
+  p This calculator will assist you in determining the actual size of your tire.  Currently very limited and only usable for passenger car tires.</p>
+
+  select(id="tirewidth"  onchange="tiresizer()")
+    -for(var i = 160; i < 350; i = i + 5){
+      option(value=i) #{i}
+    -}
+
+  select(id="tireaspect" onchange="tiresizer()")
+    -for(var i = 10; i < 85; i = i + 5){
+      option(value=i) #{i}
+    -}
+      option(value="83") &nbsp;
+
+  select(id="tirer" onchange="tiresizer()")
+    option(value="R") R
+    option(value="B") B
+    option(value="D") D
+
+  select(id="tirewheel" onchange="tiresizer()")
+    -for(var i = 10; i < 26; i++){
+      option(value=i) #{i}
+    -}
+
+  #tireanswer
