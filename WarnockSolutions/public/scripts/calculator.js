@@ -25,6 +25,8 @@ function gearratio() {
   objTrannyTable = document.getElementById("trannytable");
 
   intCounter = objTrannyTable.rows.length - 1;
+
+// How do I decide if I want to update the gear ratio or the speed.
   while (intCounter > 0){
     switch (document.getElementById("MeasureSystem").value){
       case "english":
